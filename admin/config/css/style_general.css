@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: "Font Main Site";
+    src: url('../fonts/GinAndTonicPersonalUseRegular-8MY5Z.otf');
+}
+
+@font-face {
+    font-family: "Font Description Site";
+    src: url('../fonts/Poppins-MediumItalic.ttf');
+}
+
+::-webkit-scrollbar{
+    background-color: var(--colorBlackGray);
+}
+
+::-webkit-scrollbar-track{
+    background-color: #d8cfcf;
+}
+
+:root{
+    --colorWhite: #fefefe;
+    --colorGray: #2e2c2c;
+    --colorBlack: #030303;
+    --colorBlackGray: #131314;
+    --colorGreen: #156e25;
+    --colorRed: #f32533;
+}
+
+body{
+    background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p3/3120398-retro-alcoolico-frutas-bebidas-padrao-sem-costura-para-papel-de-parede-design-vetor.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+main.mainContainer{
+    max-width: 1380px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+header.headerContainer{
+    width: 100%;
+    height: 11vh;
+    background: var(--colorBlackGray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header.headerContainer h1{
+    color: var(--colorWhite);
+    font-size: 2rem;
+    font-style: italic;
+    font-family: "Font Main Site";
+}
+
+header.headerContainer a{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--colorWhite);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+header.headerContainer i{
+    color: var(--colorWhite);
+    font-size: 1.2rem;
+}
+
+nav.navBarContainer,
+nav.navBarMobile{
+    width: 100%;
+    height: 10vh;
+    background: var(--colorBlackGray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.navBarMobile{
+    display: none;
+}
+
+ul.messyList{
+    display: flex;
+}
+
+ul.messyList li a{
+    margin: 0 13px;
+    color: var(--colorWhite);
+    font-size: 1.2rem;
+    font-style: italic;
+    position: relative;
+    font-family: "Font Main Site";
+}
+
+ul.messyList li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+    height: 3px;
+    width: 0%;
+    background-color: var(--colorRed);
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+}
+
+ul.messyList li a:hover::before{
+    width: 100%;
+    visibility: visible;
+}
+
+section.contentCardDrinks{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+section.contentCardSingle{
+    width: calc(20rem - 10px);
+    height: auto;
+    background-color: #fdf8f8;
+    margin: 10px;
+    padding-bottom: 20px;
+    box-shadow: 7px 11px 8px -6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+section.imageContent{
+    width: 100%;
+    height: 20rem;
+    background-color: #ededed;
+    padding: 10px;
+}
+
+section.contentCardSingle img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+section.descriptionProduct{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    margin: 10px 0;
+}
+
+section.descriptionProduct h1{
+    color: var(--colorBlack);
+    font-family: "Font Description Site";
+    font-size: 1rem;
+}
+
+section.descriptionProduct span{
+    color: var(--colorGreen);
+    font-size: 1rem;
+    font-family: "Font Description Site";
+}
+
+section.contentAuxiliarProduct{
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+section.contentAuxiliarProduct p{
+    width: 210px;
+    text-align: justify;
+    color: var(--colorBlack);
+    font-size: 1rem;
+}
+
+section.editProduct button{
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--colorGray);
+    display: grid;
+    place-content: center;
+    margin: 5px 0;
+    color: var(--colorWhite);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.editProduct button:nth-child(1){
+    background-color: var(--colorRed);
+}
+
+section.editProduct button:nth-child(2){
+    background-color: var(--colorGreen);
+}
+
+section.contentForm{
+    width: 40%;
+    height: 75vh;
+    background-color: var(--colorWhite);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+form.processMethodsBars{
+    padding: 10px;
+}
+
+form.processMethodsBars label, input{
+    display: block;
+}
+
+section.contentHeaderForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background-color: var(--colorBlackGray);
+    border: 10px 10px 0 0;
+}
+
+section.contentHeaderForm h1{
+    color: var(--colorWhite);
+    font-family: "Font Main Site";
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+form.processMethodsBars label{
+    color: var(--colorBlackGray);
+    font-family: "Font Description Site";
+    font-size: 1rem;
+    font-style: italic;
+}
+
+form.processMethodsBars input{
+    width: 100%;
+    height: 6vh;
+    outline: none;
+    border: 1px solid var(--colorBlackGray);
+    margin-bottom: 5px;
+    padding: 0 4px;
+    font-family: "Font Description Site";
+    font-size: 1rem;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+form.processMethodsBars textarea{
+    width: 100%;
+    height: 20vh;
+    padding: 0 4px;
+    font-family: "Font Description Site";
+    font-size: 1rem;
+    font-style: italic;
+    border-radius: 5px;
+    outline: none;
+}
+
+form.processMethodsBars input[type=submit]{
+    background-color: var(--colorBlackGray);
+    color: var(--colorWhite);
+    font-family: "Font Main Site";
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form.processMethodsBars input[type=submit]:hover{
+    background-color: var(--colorGray);
+    transition: .1s ease-in-out;
+}
